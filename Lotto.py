@@ -10,7 +10,9 @@ old_lotto_numbers = []
 my_lotto_numbers = []
 sampleing_arr = []
 sampling_numbers = []
+#동행복권 회차 carlos
 selectTime =1066
+
 
 def sendEmail(lottNumbers):
     sendEmail = "hunsibi77@naver.com"
