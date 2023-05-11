@@ -12,7 +12,8 @@ sampleing_arr = []
 sampling_numbers = []
 
 #동행복권 회차
-#여기에 복권 회차 번호를 넣는다.
+#여기에 복권 회차 번호를 넣는다
+#carlos
 selectTime =1066
 
 
