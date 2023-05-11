@@ -51,7 +51,7 @@ def get_lotto_numbers(episode):
         num_arr.append(response["drwtNo" + str(i)])
     # 1등 번호 넣는다.
     old_lotto_numbers.append(num_arr)
-    # 보너스 번호를 가지고 온다
+    # 보너스 번호를 받는다.
     bnus_arr = []
     for i in range(0,6):
         bnus_arr = copy(num_arr)
