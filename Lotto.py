@@ -10,7 +10,8 @@ old_lotto_numbers = []
 my_lotto_numbers = []
 sampleing_arr = []
 sampling_numbers = []
-#동행복권 회차 pr last
+
+#동행복권 회차
 selectTime =1066
 
 
