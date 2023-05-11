@@ -62,7 +62,7 @@ def makeLottoNumber():
     oldLottDF = pd.read_csv("oldLottoNumber.csv", header=None)
     old_lotto_list = oldLottDF.values.tolist()
 
-    # #1. 필터링에 없는 것을 랜덤으로 샘플링 한다.
+    # #1. 지금까지 당첨된 번호를 제외한 랜덤으로 5쌍 번호를 만든다.
     while len(my_lotto_numbers) < 5:
         list_of_numbers = list(range(1,46))
         random.shuffle(list_of_numbers)
@@ -71,7 +71,8 @@ def makeLottoNumber():
         if numbers not in old_lotto_list or numbers not in my_lotto_numbers:
             numbers.sort()
             my_lotto_numbers.append(numbers)
-    #2. 랜덤으로 만들어진 번호들 중에 샘플링 6개해서 5쌍 번호를 만든다.
+    #2. 1에서 만들어진 5쌍의 번호를 샘플링데이터로
+    #   3개의 쌍을 만든다.
     sampleing_arr = []
     for i in range(0,5):
        sampleing_arr =  sampleing_arr + my_lotto_numbers[i]
@@ -89,7 +90,7 @@ def makeLottoNumber():
             sampleTemp.append(samplenumbers)
             my_lotto_numbers.append(samplenumbers)
 
-    # #3. 1에서 만들어진 번호를 제외한 것을 만든다
+    # #3. 1에서 만들어진 5쌍의 번호를 제외한 번호 2쌍을 만든다.
     lotto_num = []
     sampleing_arr2 = []
     sampleing_arr = []
