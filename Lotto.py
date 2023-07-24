@@ -14,7 +14,7 @@ sampling_numbers = []
 #동행복권 회차
 #여기에 복권 회차 번호를 넣는다
 #carlos
-selectTime =1066
+selectTime =1077
 
 
 def sendEmail(lottNumbers):
@@ -138,12 +138,12 @@ def copyCsvFile():
 
 selectTime += 1
 
-# for i in range(1,selectTime):
-#    print(f'{i} 번째 로또 진행 중...')
-#    get_lotto_numbers(i)
-# get_lotto_numbers(selectTime)
+for i in range(1,selectTime):
+   print(f'{i} 번째 로또 진행 중...')
+   get_lotto_numbers(i)
+#get_lotto_numbers(selectTime)
 
-# copyCsvFile()
+copyCsvFile()
 makeLottoNumber()
 makeResult()
 sendEmail(my_lotto_numbers)
